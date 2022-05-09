@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Header } from "../../header/header.component";
 import styles from "./priority.module.scss";
-export const Priority = () => {
+import { LanguageContext } from "../../../languageWrapApp.js";
+
+export const Priority = (props) => {
   return (
     <div>
       <Header />

@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./header.styles.scss";
+import { LanguageContext } from "../../languageWrapApp";
 export const Header = () => {
+  const { language, setLanguage } = useContext(LanguageContext);
   return (
     <header>
-      <img
-        src="/swsunew.svg"
-        width={`160px`}
-        style={{ position: "absolute", top: `10px`, zIndex: -1 }}
-      />
-      <div></div>
+      <div>
+        <Link to={`/`}>
+          <img src="/swsunew.svg" width={`160px`} style={{ zIndex: -1 }} />
+        </Link>
+      </div>
       <Link to={`/`}>
         <div>
-          <span>Главная</span>
+          {language === `RU` ? <span>Главная</span> : <span>Main Page</span>}
         </div>
       </Link>
       <Link to={`/publications`}>
@@ -21,10 +22,30 @@ export const Header = () => {
       <Link to={`/contacts`}>
         <div>Контакты</div>
       </Link>
-
       <Link to={`/priority`}>
         <img src="/priority2030.svg" width={`260px`} />
       </Link>
+      <div
+        style={{
+          display: `flex`,
+          flexDirection: `column`,
+          cursor: "pointer",
+        }}
+        onClick={() =>
+          language === `RU` ? setLanguage(`EN`) : setLanguage(`RU`)
+        }
+      >
+        <img src="/globe.svg" width="40px" style={{ margin: `auto` }} />
+        {language === `RU` ? (
+          <div>
+            <b>RU</b> / EN
+          </div>
+        ) : (
+          <div>
+            RU /<b> EN</b>
+          </div>
+        )}
+      </div>
     </header>
   );
 };

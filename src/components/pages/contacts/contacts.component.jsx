@@ -42,7 +42,7 @@ export const Contacts = () => {
               fontSize: `20px`,
             }}
           >
-            <img src="../Titov.jpg" />
+            <img src="../Titov.jpg" style={{ height: `300px` }} />
             <div>
               <span style={{ fontWeight: `bold` }}>
                 Руководитель и координатор работы лаборатории:&nbsp;
