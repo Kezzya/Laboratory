@@ -105,9 +105,9 @@ export const GoalsAndTasks = () => {
       ) : (
         <div className="EN">
           <span style={{ fontWeight: `bold` }}>
-            International Scientific Laboratory of Dynamics of Nonsmooth Systems
-            SWSU - it is the only scientific laboratory of international level
-            in Russia theory of non-smooth internal systems.
+            International Scientific Laboratory for Dynamics of Non-smooth
+            Systems SWSU - it is the only scientific laboratory of international
+            level in Russia theory of non-smooth internal systems.
           </span>
           <div>
             <span style={{ color: `blue` }}>Goals and objectives</span>
@@ -147,56 +147,56 @@ export const GoalsAndTasks = () => {
             <ul>
               <li>
                 1. Prof Laura Gardini, University of Urbino Carlo Bo (university
-                founded in 1506), Italy
+                was founded in 1506), Italy
               </li>
               <li>
                 2. Prof. Mario di Bernardo. University of Naples Federico II
-                (University founded in 1224), Italy.
+                (University was founded in 1224), Italy.
               </li>
               <li>
-                3. Prof. Alexander Medvedev, Uppsala University (university
+                3. Prof. Alexander Medvedev, Uppsala University (university was
                 founded in 1477), Sweden.
               </li>
               <li>
                 4. Prof. Nikolay V. Kuznetsov, Saint Petersburg state university
                 (the university was founded in 1724). Faculty of Mathematics and
-                Mechanics, University of Jyväskylä (university founded in 1863),
-                Finland.
+                Mechanics, University of Jyväskylä (university was founded in
+                1863), Finland.
               </li>
               <li>
                 5. Assistant Prof. Anton V. Proskurnikov, Polytechnic University
-                of Turin (university founded in 1859), Italy.
+                of Turin (university was founded in 1859), Italy.
               </li>
               <li>
                 6. Prof. Petri Piiroinen, Chalmers University of Technology
-                Gothenburg (university founded in 1829), Sweden.
+                Gothenburg (university was founded in 1829), Sweden.
               </li>
               <li>
-                7. Prof. Viktor Avrutin. University of Stuttgart (university
+                7. Prof. Viktor Avrutin. University of Stuttgart (university was
                 founded in 1829). Germany.
               </li>
               <li>
                 8. Prof. Abdelali El Aroudi, Universitat Rovira i Virgili
-                (university founded in 1991), Spain.
+                (university was founded in 1991), Spain.
               </li>
               <li>
                 9. Prof. Soumitro Banerjee. Indian Institute of Science
-                Education and Research—Kolkata (университет основан в 2006 r.).
+                Education and Research—Kolkata (university was founded 2006 r.).
                 India.
               </li>
               <li>
-                10. Prof. Gerard Olivar Tost, University of Aysén (университет
-                основан в 2015 r.), Chile.
+                10. Prof. Gerard Olivar Tost, University of Aysén (university
+                was founded 2015 r.), Chile.
               </li>
             </ul>
           </div>
           <div>
-            Перечисленные ученые - это основатели и руководители ведущих научных
-            групп по теории негладких динамических систем , коллеги проф.
-            Жусубалиева Ж.Т., с которыми он проводит совместные научные
-            исследования в течение многих лет (более 8-15 лет), принимают
-            участие в выполнении НИР в рамках деятельности международного
-            подразделения ЮЗГУ.
+            Listed research studies group on the theory of non-smooth
+            atmospheric systems, colleagues prof. Zhusubaliev Zh.T., with
+            repetition he repeats joint scientific research. study for many
+            years (more than 8-15 years), take participation in the
+            implementation of research in the framework of international
+            activities subdivision of SWSU.
           </div>
         </div>
       )}

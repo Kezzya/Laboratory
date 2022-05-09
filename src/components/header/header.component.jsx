@@ -17,10 +17,10 @@ export const Header = () => {
         </div>
       </Link>
       <Link to={`/publications`}>
-        <div>Публикации</div>
+        {language === `RU` ? <div>Публикации</div> : <div>Publications</div>}
       </Link>
       <Link to={`/contacts`}>
-        <div>Контакты</div>
+        {language === `RU` ? <div>Контакты</div> : <div>Contacts</div>}
       </Link>
       <Link to={`/priority`}>
         <img src="/priority2030.svg" width={`260px`} />
