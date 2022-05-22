@@ -8,7 +8,12 @@ export const Template = (props) => {
         {props.title}
         <img src="../swsunew.svg" />
       </div>
-      <div className={styles.main}>{props.children}</div>
+
+      {props.children === undefined ? (
+        <></>
+      ) : (
+        <div className={styles.main}>{props.children}</div>
+      )}
     </div>
   );
 };

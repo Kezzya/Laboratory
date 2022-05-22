@@ -19,19 +19,19 @@ export const Main = () => {
             Systems
           </span>
         </div>
-      </div>
-      <div className={styles.subtitle}>
-        {language === `RU` ? (
-          <>
-            <div>Юго-Западный государственный университет (ЮЗГУ), Курск.</div>
-            <div>Факультет фундаментальной и прикладной информатики</div>{" "}
-          </>
-        ) : (
-          <>
-            <div>South-West State University(SWSU), Kursk.</div>
-            <div>Faculty of Fundamental and Applied Informatics</div>
-          </>
-        )}
+        <div className={styles.subtitle}>
+          {language === `RU` ? (
+            <>
+              <div>Юго-Западный государственный университет (ЮЗГУ), Курск.</div>
+              <div>Факультет фундаментальной и прикладной информатики</div>{" "}
+            </>
+          ) : (
+            <>
+              <div>South-West State University (SWSU), Kursk.</div>
+              <div>Faculty of Fundamental and Applied Informatics</div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

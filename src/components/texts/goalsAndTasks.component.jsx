@@ -46,7 +46,7 @@ export const GoalsAndTasks = () => {
             специалистом по нелинейной динамики и хаосу, теории бифуркаций
             негладких динамических систем:
           </div>
-          <div className={styles.list}>
+          <div>
             <ul>
               <li>
                 1. Prof Laura Gardini, University of Urbino Carlo Bo

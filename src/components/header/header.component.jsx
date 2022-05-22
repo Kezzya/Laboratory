@@ -1,30 +1,57 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.styles.scss";
 import { LanguageContext } from "../../languageWrapApp";
 export const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
+
   return (
     <header>
+      <div></div>
       <div>
-        <Link to={`/`}>
-          <img src="/swsunew.svg" width={`160px`} style={{ zIndex: -1 }} />
+        <Link to={`/`} className="link">
+          <img src="/swsunew.svg" width={`120px`} style={{ zIndex: -1 }} />
         </Link>
       </div>
-      <Link to={`/`}>
-        <div>
+      <Link
+        to={`/`}
+        style={{
+          textDecoration: `none`,
+        }}
+      >
+        <div className="headerText">
           {language === `RU` ? <span>Главная</span> : <span>Main Page</span>}
         </div>
       </Link>
-      <Link to={`/publications`}>
-        {language === `RU` ? <div>Публикации</div> : <div>Publications</div>}
+      <Link
+        to={`/news`}
+        style={{
+          textDecoration: `none`,
+        }}
+      >
+        <div className="headerText">
+          {language === `RU` ? <span>Новости</span> : <span>News</span>}
+        </div>
       </Link>
-      <Link to={`/contacts`}>
-        {language === `RU` ? <div>Контакты</div> : <div>Contacts</div>}
+      <Link to={`/research`} style={{ textDecoration: `none` }}>
+        <div className="headerText">
+          {language === `RU` ? (
+            <span>Направления исследований</span>
+          ) : (
+            <span>Research directions</span>
+          )}
+        </div>
       </Link>
-      <Link to={`/priority`}>
-        <img src="/priority2030.svg" width={`260px`} />
+      <Link to={`/contacts`} style={{ textDecoration: `none` }}>
+        <div className="headerText">
+          {language === `RU` ? <span>Контакты</span> : <span>Contacts</span>}
+        </div>
       </Link>
+      {/* <Link to={`/priority`} style={{ textDecoration: `none`, color: `black` }}> */}
+      <a target="_blank" href="https://priority2030.ru/">
+        <img src="/priority2030.svg" width={`160px`} />
+      </a>
+      {/* </Link> */}
       <div
         style={{
           display: `flex`,
@@ -35,7 +62,7 @@ export const Header = () => {
           language === `RU` ? setLanguage(`EN`) : setLanguage(`RU`)
         }
       >
-        <img src="/globe.svg" width="40px" style={{ margin: `auto` }} />
+        <img src="/globe.svg" width="30px" style={{ margin: `auto` }} />
         {language === `RU` ? (
           <div>
             <b>RU</b> / EN
@@ -46,6 +73,7 @@ export const Header = () => {
           </div>
         )}
       </div>
+      <div></div>
     </header>
   );
 };
