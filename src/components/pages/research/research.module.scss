@@ -1,4 +1,8 @@
 .list {
-  margin: 20px 60px 5px 120px;
+  margin: 10px 60px 5px 120px;
   display: flex;
+}
+li:hover {
+  color: blue;
+  cursor: pointer;
 }

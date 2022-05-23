@@ -8,3 +8,8 @@
 body {
   min-width: 400px;
 }
+figure {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
