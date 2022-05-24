@@ -13,13 +13,14 @@ import { Testosterone } from "./texts/testosterone.component";
 export const Research = (props) => {
   const { language } = useContext(LanguageContext);
   const [current, setCurrent] = useState(1);
+
   return (
     <div>
       <Header />
       <Template title="Направления научных исследований"></Template>
       <div className={styles.list}>
         {language === "RU" ? (
-          <ul style={{ color: `black` }}>
+          <ul style={{ color: `black`, fontWeight: `` }}>
             <li onClick={() => setCurrent(1)}>
               1. Автоматическое управление нейромышечной блокадой
             </li>

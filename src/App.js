@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "./components/header/header.component";
 import { Main } from "./components/main/main.component";
 import { Template } from "./components/template/template.component";

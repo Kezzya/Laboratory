@@ -1,9 +1,12 @@
 .top {
   display: flex;
   background-color: orange;
-  border-radius: 14px;
-  color: black;
 
+  border-radius: 10px 10px 0px 0px;
+  color: black;
   font-weight: bold;
-  margin-top: 0%;
+  padding: 12px;
+  width: 300px;
+
+  text-align: center;
 }
