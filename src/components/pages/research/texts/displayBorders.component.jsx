@@ -1,3 +1,4 @@
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import React from "react";
 import { Template } from "../../../template/template.component";
 import styles from "./displayBorders.module.scss";
@@ -84,6 +85,97 @@ export const DisplayBorders = () => {
           </div>
         </div>
       </Template>
+      <Template title="Математическая модель инвертора с непрерывным временем">
+        {" "}
+        <MathJaxContext>
+          <div
+            style={{
+              display: `flex`,
+
+              alignItems: `center`,
+              margin: `auto`,
+            }}
+          >
+            <MathJax>
+              {"\\begin{equation}\\dfrac{d x}{d t} =\\end{equation}"}
+            </MathJax>
+            <MathJax style={{ marginTop: `12px` }}>
+              {
+                "\\begin{cases}\\lambda (x-1), \\quad x(t)\\Bigr|_t=[t] < \\dfrac{q}{Г}cos\\left(\\dfrac{2\\pi[t]}{m}\\right) - \\dfrac{2P}{\\alpha Г}\\left(t-[t]-\\dfrac{1}{2}\\right)\\\\\\lambda (x+1), \\quad x(t)\\Bigr|_t=[t] > \\dfrac{q}{Г}cos\\left(\\dfrac{2\\pi[t]}{m}\\right) - \\dfrac{2P}{\\alpha Г}\\left(t-[t]-\\dfrac{1}{2}\\right) \\end{cases} "
+              }
+            </MathJax>
+          </div>
+        </MathJaxContext>
+      </Template>
+      <div
+        style={{
+          display: `flex`,
+          margin: `auto`,
+          padding: `10px 0 10px 0`,
+        }}
+      >
+        <figure style={{ margin: `auto` }}>
+          <img src="/displayBorders/8.jpg" width={`260px`} />
+          <figcaption
+            style={{
+              margin: `auto`,
+              marginTop: `10px`,
+              backgroundColor: `rgb(245, 204, 129)`,
+              padding: `12px 20px 12px 20px`,
+              borderRadius: `6px`,
+              boxShadow: `1px 1px 1px 1px`,
+            }}
+          >
+            <MathJaxContext>
+              <MathJax>
+                {
+                  "\\begin{equation}x = \\dfrac{R i}{E_0}, \\overline{t} = \\dfrac{t}{a}, P = \\dfrac{R}{\\beta E_*}V_0, q = \\dfrac{R}{\\beta E_*}V_m ,\\end{equation}"
+                }
+                {
+                  "\\begin{equation} \\lambda = -\\dfrac{R}{L}a, Г = \\dfrac{E_0}{E_*}.\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
+          </figcaption>
+        </figure>
+        <figure style={{ margin: `auto` }}>
+          <img
+            src="/displayBorders/9.jpg"
+            width={`260px`}
+            style={{ margin: `auto` }}
+          />
+          <figcaption
+            style={{
+              margin: `auto`,
+              marginTop: `10px`,
+              backgroundColor: `rgb(245, 204, 129)`,
+              padding: `12px 20px 12px 20px`,
+              borderRadius: `6px`,
+              boxShadow: `1px 1px 1px 1px`,
+            }}
+          >
+            <MathJaxContext>
+              <MathJax>
+                {
+                  "Кратность частот \\begin{equation} m = \\dfrac{f_{sw}}{f_{ref}}\\end{equation} "
+                }
+                {
+                  "\\begin{equation}50 \\lessapprox m \\lessapprox 5 000.\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        style={{
+          display: `flex`,
+          margin: `auto`,
+          padding: `10px 0 10px 0`,
+        }}
+      >
+        <div width={`260px`}></div>
+      </div>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
           <li>

@@ -58,11 +58,30 @@ export const Testosterone = () => {
         </div>
       </Template>
       <Template title="4.1. Импульсная модель регуляции уровня тестостерона у мужчин">
-        <img
-          src="/testosterone/2.jpg"
-          height={`400px`}
-          style={{ display: `flex`, margin: `10px 10px 0px 0px` }}
-        />
+        <div
+          style={{
+            display: `flex`,
+            margin: `auto`,
+            gap: `40px`,
+            flexWrap: `wrap`,
+          }}
+        >
+          <img
+            src="/testosterone/2.jpg"
+            height={`350px`}
+            style={{ display: `flex`, margin: `10px 10px 0px 0px` }}
+          />{" "}
+          <img
+            src="/testosterone/3.jpg"
+            height={`350px`}
+            style={{ display: `flex`, margin: `10px 10px 0px 0px` }}
+          />{" "}
+          <img
+            src="/testosterone/4.jpg"
+            height={`350px`}
+            style={{ display: `flex`, margin: `10px 10px 0px 0px` }}
+          />
+        </div>
       </Template>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
