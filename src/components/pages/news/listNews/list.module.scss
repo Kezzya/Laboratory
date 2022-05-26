@@ -1,0 +1,23 @@
+.angleDate {
+  text-align: center;
+  color: black;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  padding: 10px;
+  border-radius: 6px;
+}
+.wrap {
+  display: flex;
+  position: relative;
+  margin: 20px 120px 2px 120px;
+}
+.imgSize {
+  width: 200px;
+  height: 200px;
+}
+.angleDate:hover {
+  background-color: blue;
+  color: white;
+}

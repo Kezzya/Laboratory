@@ -18,10 +18,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<App />} />
-        <Route exact path="/priority" element={<Priority />} />
         <Route exact path="/contacts" element={<Contacts />} />
         <Route exact path="/research" element={<Research />} />
         <Route exact path="/news" element={<News />} />
+        <Route exact path="/news/priority" element={<Priority />} />
       </Routes>
     </BrowserRouter>
   </LanguageWrapApp>
