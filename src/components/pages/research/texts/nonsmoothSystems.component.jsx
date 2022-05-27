@@ -16,6 +16,34 @@ export const NonsmoothSystems = () => {
           )}
         </div>
       </Template>
+      <Template title="Кризис хаотического аттрактора (expansion bifurcation, interior crisis)">
+        <div style={{ display: `flex`, flexWrap: `wrap`, gap: `20px` }}>
+          {listImgTwo.map(
+            (el) => (
+              <img src={el} width="350px" />
+            )
+            // console.log(el)
+          )}
+          <div style={{ fontWeight: `bold` }}>
+            Механизмы внезапного изменения размера хаотического аттрактора через
+            гомоклиническую бифуркацию (expansion bifurcation crisis).
+          </div>
+        </div>
+      </Template>
+      <Template title="Столкновение притягивающей замкнутой инвариантной кривой с границей ее бассейна притяжения">
+        <div style={{ display: `flex`, flexWrap: `wrap`, gap: `20px` }}>
+          {listImgThree.map(
+            (el) => (
+              <img src={el} width="350px" />
+            )
+            // console.log(el)
+          )}
+          <div style={{ fontWeight: `bold` }}>
+            Трансформации замкнутой инвариантной кривой через гомоклинические
+            бифуркации.
+          </div>
+        </div>
+      </Template>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
           <li>
@@ -91,4 +119,25 @@ const listImg = [
   "/nonsmooth/4.jpg",
   "/nonsmooth/5.jpg",
   "/nonsmooth/6.jpg",
+];
+const listImgTwo = [
+  "/nonsmooth/7.jpg",
+  "/nonsmooth/8.jpg",
+  "/nonsmooth/9.jpg",
+  "/nonsmooth/10.jpg",
+  "/nonsmooth/11.jpg",
+  "/nonsmooth/12.jpg",
+  "/nonsmooth/13.jpg",
+  "/nonsmooth/14.jpg",
+  "/nonsmooth/15.jpg",
+];
+const listImgThree = [
+  "/nonsmooth/16.jpg",
+  "/nonsmooth/17.jpg",
+  "/nonsmooth/18.jpg",
+  "/nonsmooth/19.jpg",
+  "/nonsmooth/20.jpg",
+  "/nonsmooth/21.jpg",
+  "/nonsmooth/22.jpg",
+  "/nonsmooth/23.jpg",
 ];

@@ -291,13 +291,13 @@ export const DisplayBorders = () => {
               gap: `20px`,
             }}
           >
-            <img src="/displayBorders/11.jpg" alt="img" width={`630px`} />
+            <img src="/displayBorders/11.jpg" alt="img" width={`550px`} />
             <div style={{ display: `flex`, flexDirection: `row`, gap: `10px` }}>
               <div>
-                <img src="/displayBorders/12.jpg" alt="img" width={`310px`} />
+                <img src="/displayBorders/12.jpg" alt="img" width={`270px`} />
               </div>
               <div>
-                <img src="/displayBorders/13.jpg" alt="img" width={`310px`} />
+                <img src="/displayBorders/13.jpg" alt="img" width={`270px`} />
               </div>
             </div>
           </div>
@@ -306,7 +306,7 @@ export const DisplayBorders = () => {
             <img
               src="/displayBorders/14.jpg"
               alt="img"
-              height={`850px`}
+              height={`740px`}
               style={{ display: `flex` }}
             />
           </div>

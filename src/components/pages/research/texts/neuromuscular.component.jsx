@@ -92,7 +92,7 @@ export const Neuromuscular = () => {
               </MathJax>
             </MathJaxContext>
             Здесь физический смысл переменных и параметров пояснены в наших
-            публикациях [2-6].
+            публикациях.
           </div>
         </div>
       </Template>
