@@ -47,7 +47,7 @@ export const DisplayBorders = () => {
             <div
               style={{
                 flexWrap: `wrap`,
-                marginLeft: `auto`,
+
                 marginTop: `30px`,
               }}
             >
@@ -56,7 +56,7 @@ export const DisplayBorders = () => {
               </div>
               <div
                 style={{
-                  backgroundColor: `rgb(255, 210, 40)`,
+                  backgroundColor: `rgb(255, 220, 140)`,
                   borderRadius: `0px 0px 10px 10px`,
                 }}
               >
@@ -73,7 +73,7 @@ export const DisplayBorders = () => {
 
               <div
                 style={{
-                  backgroundColor: `rgb(255, 210, 40)`,
+                  backgroundColor: `orange`,
                   borderRadius: `0px 0px 10px 10px`,
                   textAlign: `center`,
                 }}
@@ -107,6 +107,7 @@ export const DisplayBorders = () => {
           </div>
         </MathJaxContext>
       </Template>
+
       <div
         style={{
           display: `flex`,
@@ -131,6 +132,7 @@ export const DisplayBorders = () => {
                 {
                   "\\begin{equation}x = \\dfrac{R i}{E_0}, \\overline{t} = \\dfrac{t}{a}, P = \\dfrac{R}{\\beta E_*}V_0, q = \\dfrac{R}{\\beta E_*}V_m ,\\end{equation}"
                 }
+
                 {
                   "\\begin{equation} \\lambda = -\\dfrac{R}{L}a, Г = \\dfrac{E_0}{E_*}.\\end{equation}"
                 }
@@ -175,6 +177,99 @@ export const DisplayBorders = () => {
         }}
       >
         <div width={`260px`}></div>
+      </div>
+
+      <Template title="Математическая модель инвертора с дискретным временем">
+        <div
+          style={{
+            display: `flex`,
+            margin: `auto`,
+            alignItems: `center`,
+            gap: `40px`,
+          }}
+        >
+          <MathJaxContext>
+            <MathJax>
+              {
+                "\\begin{equation} x_{k+1}=F(x_k,k),\\quad k=0,1,2,...,\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+          <MathJaxContext>
+            <MathJax>
+              {
+                "\\begin{equation} F(x_k,k)=\\begin{cases}F_L(x_k)=bx_k - (b - 1),\\quad x_k \\leq s^-_k; \\\\F_M(x_k)=bx_k-(b + 1)+2b^{(1-x_k)},\\quad s^-_k < x_k < s^+_k;\\\\F_R(x_k)= bx_k + (b-1), \\quad s^+_k \\leq x_k;\\end{cases}\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
+      </Template>
+      <div
+        style={{
+          display: `flex`,
+          margin: `10px 120px 10px 120px`,
+        }}
+      >
+        <figure style={{ margin: `auto` }}>
+          <img
+            src="/displayBorders/10.jpg"
+            width={`400px`}
+            style={{ display: `flex` }}
+          />
+          <figcaption>Двумерное отображение</figcaption>
+        </figure>
+        <div
+          style={{
+            margin: `auto`,
+            marginTop: `10px`,
+            backgroundColor: `rgb(245, 204, 129)`,
+            padding: `12px 20px 12px 20px`,
+            borderRadius: `6px`,
+            boxShadow: `1px 1px 1px 1px`,
+            textAlign: `center`,
+            display: `flex`,
+          }}
+        >
+          <MathJaxContext>
+            <MathJax>
+              {
+                "Многообразие переключения: \\begin{equation} s^\\pm_k = \\dfrac{q}{Г} cos\\left(\\dfrac{2\\pi k}{m}\\right)\\pm\\dfrac{P}{\\alphaГ} \\end{equation} "
+              }
+              {
+                " относительная длительность импульсов \\begin{equation} 0 \\leq z_k \\leq 1.0:\\end{equation}"
+              }
+              {
+                "\\begin{equation}z_k = \\dfrac{\\alpha q}{2P} cos\\left(\\dfrac{2\\pi k}{m}\\right) - \\dfrac{\\alpha Г}{2P}x_k+\\dfrac{1}{2}\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
+        <div
+          style={{
+            margin: `auto`,
+            marginTop: `10px`,
+            backgroundColor: `rgb(245, 204, 129)`,
+            padding: `12px 20px 12px 20px`,
+            borderRadius: `6px`,
+            boxShadow: `1px 1px 1px 1px`,
+            textAlign: `center`,
+            display: `flex`,
+          }}
+        >
+          <MathJaxContext>
+            <MathJax>
+              {
+                "Насыщение модулятора: \\begin{equation} x_k \\leq s^-_k \\Rightarrow 1 \\end{equation} "
+              }
+              {
+                " \\begin{equation} s^-_k < x_k < s^+_k \\Rightarrow z_k  \\end{equation}"
+              }
+              {
+                "\\begin{equation} s^+_k \\leq x_k \\Rightarrow 0  \\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
       </div>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
