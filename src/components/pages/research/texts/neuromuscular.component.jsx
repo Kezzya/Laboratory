@@ -7,27 +7,30 @@ export const Neuromuscular = () => {
   return (
     <div>
       <Template title={`1. Автоматическое управление нейромышечной блокадой `}>
-        <div className="">
-          <div style={{ fontWeight: `bold` }}>
+        <div style={{ margin: `auto` }}>
+          <div style={{ fontWeight: `bold`, marginBottom: `20px` }}>
             Совместные исследования с Уппсальским университетом, Швеция
             (Department of Information Technology, Uppsala University, Sweden)
           </div>
           <div className={styles.imgs}>
             <figure>
-              <img src="/neuro.jpg" height="380px" />
+              <img src="/neuro.jpg" height="250px" />
               <figcaption style={{ fontWeight: `bold` }}>
                 Измерение уровня нейромышечной блокады
               </figcaption>
             </figure>
             <figure>
-              <img src="/galeno.png" height="380px" />
+              <img src="/galeno.png" height="250px" />
               <figcaption style={{ fontWeight: `bold` }}>
                 Оборудование на платформе Galeno (из PhD диссертации Margarida
                 M. da Silva [1])
               </figcaption>
             </figure>
           </div>
-
+        </div>
+      </Template>
+      <Template title="Математическая модель">
+        <div>
           <div>
             Стандартные физиологически обоснованные модели, описывающие
             взаимосвязь между введеной дозой анестетика u(t) и его эффектом,
@@ -61,6 +64,27 @@ export const Neuromuscular = () => {
             выражении по измеренному уровню у(t) нейромышечной блокады NMB. Эта
             функуция зависит от восьми параметров, которые необходимо оценить на
             основе клинических данных.
+          </div>
+        </div>
+      </Template>
+      <Template title="Бифуркационный анализ">
+        <div
+          style={{
+            display: `flex`,
+            flexDirection: `column`,
+            margin: `auto`,
+            gap: `40px`,
+          }}
+        >
+          <div style={{ display: `flex`, gap: `20px`, flexWrap: `wrap` }}>
+            <img src="/1.jpg" alt="img" height={`300px`} />
+            <img src="/2.jpg" alt="img" height={`300px`} />
+            <img src="/3.jpg" alt="img" height={`300px`} />
+          </div>
+          <div style={{ display: `flex`, gap: `20px`, flexWrap: `wrap` }}>
+            <img src="/4.jpg" alt="img" height={`300px`} />
+            <img src="/5.jpg" alt="img" height={`300px`} />
+            <img src="/6.jpg" alt="img" height={`300px`} />
           </div>
         </div>
       </Template>

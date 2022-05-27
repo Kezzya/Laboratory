@@ -91,7 +91,6 @@ export const DisplayBorders = () => {
           <div
             style={{
               display: `flex`,
-
               alignItems: `center`,
               margin: `auto`,
             }}
@@ -99,7 +98,7 @@ export const DisplayBorders = () => {
             <MathJax>
               {"\\begin{equation}\\dfrac{d x}{d t} =\\end{equation}"}
             </MathJax>
-            <MathJax style={{ marginTop: `12px` }}>
+            <MathJax style={{ marginTop: `12px` }} className={styles.font}>
               {
                 "\\begin{cases}\\lambda (x-1), \\quad x(t)\\Bigr|_t=[t] < \\dfrac{q}{Г}cos\\left(\\dfrac{2\\pi[t]}{m}\\right) - \\dfrac{2P}{\\alpha Г}\\left(t-[t]-\\dfrac{1}{2}\\right)\\\\\\lambda (x+1), \\quad x(t)\\Bigr|_t=[t] > \\dfrac{q}{Г}cos\\left(\\dfrac{2\\pi[t]}{m}\\right) - \\dfrac{2P}{\\alpha Г}\\left(t-[t]-\\dfrac{1}{2}\\right) \\end{cases} "
               }
@@ -126,9 +125,10 @@ export const DisplayBorders = () => {
               borderRadius: `6px`,
               boxShadow: `1px 1px 1px 1px`,
             }}
+            className={styles.font}
           >
             <MathJaxContext>
-              <MathJax>
+              <MathJax className={styles.font}>
                 {
                   "\\begin{equation}x = \\dfrac{R i}{E_0}, \\overline{t} = \\dfrac{t}{a}, P = \\dfrac{R}{\\beta E_*}V_0, q = \\dfrac{R}{\\beta E_*}V_m ,\\end{equation}"
                 }
@@ -155,9 +155,10 @@ export const DisplayBorders = () => {
               borderRadius: `6px`,
               boxShadow: `1px 1px 1px 1px`,
             }}
+            className={styles.font}
           >
             <MathJaxContext>
-              <MathJax>
+              <MathJax className={styles.font}>
                 {
                   "Кратность частот \\begin{equation} m = \\dfrac{f_{sw}}{f_{ref}}\\end{equation} "
                 }
@@ -189,7 +190,7 @@ export const DisplayBorders = () => {
           }}
         >
           <MathJaxContext>
-            <MathJax>
+            <MathJax className={styles.font}>
               {
                 "\\begin{equation} x_{k+1}=F(x_k,k),\\quad k=0,1,2,...,\\end{equation}"
               }
@@ -229,9 +230,10 @@ export const DisplayBorders = () => {
             textAlign: `center`,
             display: `flex`,
           }}
+          className={styles.font}
         >
           <MathJaxContext>
-            <MathJax>
+            <MathJax className={styles.font}>
               {
                 "Многообразие переключения: \\begin{equation} s^\\pm_k = \\dfrac{q}{Г} cos\\left(\\dfrac{2\\pi k}{m}\\right)\\pm\\dfrac{P}{\\alphaГ} \\end{equation} "
               }
@@ -257,7 +259,7 @@ export const DisplayBorders = () => {
           }}
         >
           <MathJaxContext>
-            <MathJax>
+            <MathJax className={styles.font}>
               {
                 "Насыщение модулятора: \\begin{equation} x_k \\leq s^-_k \\Rightarrow 1 \\end{equation} "
               }
@@ -271,6 +273,45 @@ export const DisplayBorders = () => {
           </MathJaxContext>
         </div>
       </div>
+      <Template title="Макроструктура пространства параметров">
+        <div
+          style={{
+            display: `flex`,
+            flexDirection: `row`,
+            gap: `40px`,
+            flexWrap: `wrap`,
+            margin: `auto`,
+          }}
+        >
+          <div
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              flexDirection: `column`,
+              gap: `20px`,
+            }}
+          >
+            <img src="/displayBorders/11.jpg" alt="img" width={`630px`} />
+            <div style={{ display: `flex`, flexDirection: `row`, gap: `10px` }}>
+              <div>
+                <img src="/displayBorders/12.jpg" alt="img" width={`310px`} />
+              </div>
+              <div>
+                <img src="/displayBorders/13.jpg" alt="img" width={`310px`} />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="/displayBorders/14.jpg"
+              alt="img"
+              height={`850px`}
+              style={{ display: `flex` }}
+            />
+          </div>
+        </div>
+      </Template>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
           <li>
