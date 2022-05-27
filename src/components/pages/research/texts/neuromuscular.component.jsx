@@ -1,3 +1,4 @@
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../../../languageWrapApp";
 import { Template } from "../../../template/template.component";
@@ -45,7 +46,7 @@ export const Neuromuscular = () => {
             <img
               src="/scheme.jpg"
               width="700px"
-              style={{ display: `flex`, margin: `auto` }}
+              style={{ display: `flex`, margin: `10px auto 0px auto` }}
             />
             <figcaption>Рис. 1.1. Структурная схема ПИД регулятора</figcaption>
           </figure>
@@ -63,7 +64,35 @@ export const Neuromuscular = () => {
             концентрацию эффекта Ce(t) с эффектом препарата в количественном
             выражении по измеренному уровню у(t) нейромышечной блокады NMB. Эта
             функуция зависит от восьми параметров, которые необходимо оценить на
-            основе клинических данных.
+            основе клинических данных. Управляющий сигнал u(t) формирует ПИД
+            регулятор (PID) (Рис. 1.1){" "}
+            <MathJaxContext>
+              <MathJax className={styles.font}>
+                {
+                  "\\begin{equation} u(t)=K\\left(s(t) + T_i\\int \\varepsilon (s)ds + T_d\\dfrac{d\\varepsilon}{dt}\\right), \\varepsilon (t) = y_{ref} - y(t).\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
+            При наличии надежных моделей фармакокинетики (PK) и фармакодинамики
+            (PD) можно избежать недодозировки или передозировки,
+            запрограммировав шприцевые насосы на целевые значения эффективности
+            препарата. Существует несколько моеделей, одна из них, называемая
+            "минимально параметризованная" (minimally parameterized), имеет вид
+            <MathJaxContext>
+              <MathJax className={styles.font}>
+                {
+                  "\\begin{equation}\\dot{x} = f(x), x=(x_1,x_2,x_3,x_4)^T, f(x)=(f_1,f_2,f_3,f_4)^T, где\\end{equation}"
+                }
+                {
+                  "\\begin{equation}f_1=-\\alpha k_3x_1-\\alpha ^2k_1k_3KT_dФ^`(x_3)(x_2-x_3)+\\alpha k_3 K(y_ref-Ф(x_3))+\\dfrac{\\alpha k_3K}{T_i}x_4,\\end{equation}"
+                }
+                {
+                  "\\begin{equation}f_2=\\alpha k_2(x_1-x_2), f_3=\\alpha k_1(x_2-x_3), f_4=y_{ref}-Ф(x_3), Ф(x_3)=\\dfrac{100C^{\\gamma}_{50}}{C^{\\gamma}_{50} +x^{\\gamma}_3}\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
+            Здесь физический смысл переменных и параметров пояснены в наших
+            публикациях [2-6].
           </div>
         </div>
       </Template>
