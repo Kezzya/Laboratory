@@ -197,7 +197,7 @@ export const DisplayBorders = () => {
             </MathJax>
           </MathJaxContext>
           <MathJaxContext>
-            <MathJax>
+            <MathJax className={styles.font}>
               {
                 "\\begin{equation} F(x_k,k)=\\begin{cases}F_L(x_k)=bx_k - (b - 1),\\quad x_k \\leq s^-_k; \\\\F_M(x_k)=bx_k-(b + 1)+2b^{(1-x_k)},\\quad s^-_k < x_k < s^+_k;\\\\F_R(x_k)= bx_k + (b-1), \\quad s^+_k \\leq x_k;\\end{cases}\\end{equation}"
               }
@@ -312,6 +312,120 @@ export const DisplayBorders = () => {
           </div>
         </div>
       </Template>
+      <Template title="Различные типы периодических орбит в области П1">
+        <div
+          style={{
+            display: `flex`,
+            flexDirection: `column`,
+            flexWrap: `wrap`,
+            gap: `20px`,
+            margin: `auto`,
+          }}
+        >
+          <div style={{ display: `flex`, flexDirection: `row` }}>
+            <div>
+              <MathJaxContext>
+                <MathJax style={{ fontSize: `24px` }} className={styles.font}>
+                  {"\\begin{equation}O_{M^m}\\end{equation}"}
+                  {
+                    "\\begin{equation}Область\\quad П_1^{(1)} \\subset П_1\\end{equation}"
+                  }
+                </MathJax>
+              </MathJaxContext>
+            </div>
+
+            <img
+              src="/displayBorders/15.jpg"
+              height={`150px`}
+              style={{ margin: `0px 0px 0px auto` }}
+            />
+          </div>
+          <div style={{ display: `flex` }}>
+            <MathJaxContext>
+              <MathJax
+                style={{ fontSize: `24px`, margin: `0px 40px 0px 0px` }}
+                className={styles.font}
+              >
+                {
+                  "\\begin{equation}Область\\quad П_1^{(4)} \\subset П_1\\end{equation}"
+                }
+                {
+                  "\\begin{equation}O_{M^{k1}R^{k2}M^{k3}L^{k4},\\quad k_1+k_2+k_3+k_4 = m}\\end{equation}"
+                }
+              </MathJax>
+              <MathJax
+                style={{ fontSize: `24px`, margin: `auto` }}
+                className={styles.font}
+              ></MathJax>
+            </MathJaxContext>
+
+            <img
+              src="/displayBorders/16.jpg"
+              height={`150px`}
+              style={{ margin: `0px 0px 0px auto` }}
+            />
+          </div>
+          <div style={{ display: `flex` }}>
+            <div>
+              <MathJaxContext>
+                <MathJax style={{ fontSize: `24px` }} className={styles.font}>
+                  {
+                    "\\begin{equation}Область\\quad П_1^{(*)} \\subset П_1\\end{equation}"
+                  }
+                </MathJax>
+              </MathJaxContext>
+            </div>
+
+            <img
+              src="/displayBorders/17.jpg"
+              height={`150px`}
+              style={{ margin: `0px 0px 0px auto` }}
+            />
+          </div>
+        </div>
+      </Template>
+      <Template title="`Border collisions` в области П1(4)">
+        <img
+          src="/displayBorders/18.jpg"
+          height={`700vw`}
+          style={{ margin: `auto` }}
+        />
+      </Template>
+      <Template title="Исследование явления 'bubbling'">
+        <figure>
+          <img
+            src="/displayBorders/19.jpg"
+            height={`400vw`}
+            style={{ margin: `auto` }}
+          />
+          <figcaption>
+            Лаборатория проф. Abdelali El Aroudi, Department of Electronics,
+            Electrical Engineering and Automatic Control Universitat Rovira i
+            Virgili, Tarragona, Spain. Экспериментальное детектирование
+            "bubbling" в однофазном инверторе.
+          </figcaption>
+        </figure>
+      </Template>
+      <div
+        style={{
+          display: `flex`,
+          margin: `auto`,
+          width: `80vw`,
+          overflow: `auto`,
+        }}
+      >
+        <figure style={{ margin: `auto` }}>
+          <img src="/displayBorders/20.jpg" height={`400px`} />
+          <figcaption>Однофазный инвертор</figcaption>
+        </figure>
+        <figure style={{ margin: `auto` }}>
+          <img src="/displayBorders/21.jpg" height={`400px`} />
+          <figcaption>
+            "Bubbling" индуцируется border, шумом после pitchfork и flip
+          </figcaption>
+        </figure>
+      </div>
+
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
           <li>

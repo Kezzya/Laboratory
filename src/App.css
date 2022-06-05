@@ -13,3 +13,6 @@ figure {
   font-weight: bold;
   margin-bottom: 8px;
 }
+html {
+  font-size: 1vw;
+}
