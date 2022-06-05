@@ -1,11 +1,11 @@
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import React from "react";
 import { Template } from "../../../template/template.component";
-
+import styles from "./displayBorders.module.scss";
 export const Testosterone = () => {
   return (
     <div>
       <Template title="4. Регуляция уровня тестостерона в мужсокм организме">
-        {" "}
         <div>
           <figure>
             <img
@@ -81,6 +81,84 @@ export const Testosterone = () => {
             height={`350px`}
             style={{ display: `flex`, margin: `10px 10px 0px 0px` }}
           />
+        </div>
+        <div style={{ margin: `auto` }}>
+          <MathJaxContext>
+            <MathJax style={{ fontSize: `24px` }} className={styles.font}>
+              {
+                "\\begin{equation}x = -b_1 * x, y = g_1 * x - b_2 * y, z = -b_3 * z + g_2 * y, x(t^+_k) = x (t^-_k) + F(z(t_k)),\\end{equation}"
+              }
+              {
+                "\\begin{equation}t_{k+1}=t_k + Ф(z(t_k)), Ф(z)=k_1 + k_2\\dfrac{(z/h)^P}{1 + (z/h)^P}, F(z) = k_3 + \\dfrac{k_4}{1 + (z/h)^P}.\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
+        <div style={{ display: `flex`, flexDirection: `column` }}>
+          <div>
+            <span style={{ fontWeight: `bold` }}>
+              Здесь x = GnRH, y = LH, z = Te - концентрация гормонов GnRH LH и
+              Te; b1,b2,b3,k1,k2,k3,k4,g1,g2,h и p - параметры.
+            </span>
+          </div>
+          <div style={{ display: `flex`, gap: `20px` }}>
+            <figure>
+              <img
+                src="/testosterone/5.jpg"
+                alt="img"
+                height={`300px`}
+                style={{ margin: `15px` }}
+              />
+              <img
+                src="/testosterone/6.jpg"
+                alt="img"
+                height={`300px`}
+                style={{ margin: `15px` }}
+              />
+              <img
+                src="/testosterone/7.jpg"
+                alt="img"
+                height={`300px`}
+                style={{ margin: `15px` }}
+              />
+              <img
+                src="/testosterone/8.jpg"
+                alt="img"
+                height={`300px`}
+                style={{ margin: `15px` }}
+              />
+              <figcaption>
+                Переход к хаосу через классический каскад бифуркаций удвоения
+                периода
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </Template>
+      <Template title="Импульсная модель регуляции уровня тестостерона с запаздыванием">
+        <div
+          style={{
+            display: `flex`,
+            flexDirection: `row`,
+            gap: `40px`,
+            margin: `auto`,
+          }}
+        >
+          <div>
+            <img src="/testosterone/9.jpg" height={`600px`} />
+          </div>
+          <div
+            style={{ display: `flex`, flexDirection: `column`, gap: `40px` }}
+          >
+            <img src="/testosterone/10.jpg" height={`300px`} />
+            <img src="/testosterone/12.jpg" height={`300px`} />
+          </div>
+          <div
+            style={{ display: `flex`, flexDirection: `column`, gap: `40px` }}
+          >
+            <img src="/testosterone/11.jpg" height={`300px`} />
+            <img src="/testosterone/13.jpg" height={`300px`} />
+          </div>
         </div>
       </Template>
       <Template title="Основные публикации по результатам исследований">
