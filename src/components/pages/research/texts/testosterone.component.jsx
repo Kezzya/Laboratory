@@ -86,7 +86,7 @@ export const Testosterone = () => {
           <MathJaxContext>
             <MathJax style={{ fontSize: `24px` }} className={styles.font}>
               {
-                "\\begin{equation}x = -b_1 * x, y = g_1 * x - b_2 * y, z = -b_3 * z + g_2 * y, x(t^+_k) = x (t^-_k) + F(z(t_k)),\\end{equation}"
+                "\\begin{equation} x = -b_1 * x, y = g_1 * x - b_2 * y, z = -b_3 * z + g_2 * y, x(t^+_k) = x (t^-_k) + F(z(t_k)),\\end{equation}"
               }
               {
                 "\\begin{equation}t_{k+1}=t_k + Ф(z(t_k)), Ф(z)=k_1 + k_2\\dfrac{(z/h)^P}{1 + (z/h)^P}, F(z) = k_3 + \\dfrac{k_4}{1 + (z/h)^P}.\\end{equation}"
@@ -135,7 +135,7 @@ export const Testosterone = () => {
           </div>
         </div>
       </Template>
-      <Template title="Импульсная модель регуляции уровня тестостерона с запаздыванием">
+      <Template title="4.2 Импульсная модель регуляции уровня тестостерона с запаздыванием">
         <div
           style={{
             display: `flex`,
@@ -158,6 +158,86 @@ export const Testosterone = () => {
           >
             <img src="/testosterone/11.jpg" height={`300px`} />
             <img src="/testosterone/13.jpg" height={`300px`} />
+          </div>
+        </div>
+        <div style={{ margin: `auto` }}>
+          <MathJaxContext>
+            <MathJax style={{ fontSize: `24px` }} className={styles.font}>
+              {
+                "\\begin{equation} x = -b_1 * x, y = g_1 * x - b_2 * y, z = -b_3 * z + g_2 * y(t - \\tau),\\end{equation}"
+              }
+              {
+                "\\begin{equation} x(t^+_k) = x (t^-_k) + F(z(t_k)), t_{k+1}=t_k + Ф(z(t_k)),\\end{equation}"
+              }
+              {
+                "\\begin{equation} Ф(z)=k_1 + k_2\\dfrac{(z/h)^P}{1 + (z/h)^P}, F(z) = k_3 + \\dfrac{k_4}{1 + (z/h)^P}.\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
+      </Template>
+      <Template title="4.3 Импульсная модель с локальной обратной связью">
+        <div>
+          <div
+            style={{
+              display: `flex`,
+              flexDirection: `row`,
+              margin: `auto`,
+              gap: `80px`,
+            }}
+          >
+            <div
+              style={{ display: `flex`, flexDirection: `column`, gap: `10px` }}
+            >
+              <figure>
+                <img src="/testosterone/14.jpg" height={`600px`} />
+                <img src="/testosterone/15.jpg" height={`400px`} />
+                <figcaption>
+                  Схема эндокринной оси гипоталамус-гипофиз. 1 - Функция Хилла
+                  h(z), описывающая внутреннюю обратную связь, 2 -
+                  кусочно-линейная аппроксимация h(z)
+                </figcaption>
+              </figure>
+            </div>
+            <div
+              style={{ display: `flex`, flexDirection: `column`, gap: `10px` }}
+            >
+              <figure>
+                <div
+                  style={{ display: `flex`, flexDirection: `row`, gap: `10px` }}
+                >
+                  <img src="/testosterone/16.jpg" height={`500px`} />
+                  <img src="/testosterone/17.jpg" height={`500px`} />
+                </div>
+                <div
+                  style={{ display: `flex`, flexDirection: `row`, gap: `10px` }}
+                >
+                  <img src="/testosterone/18.jpg" height={`500px`} />
+                  <img src="/testosterone/19.jpg" height={`500px`} />
+                  <img src="/testosterone/20.jpg" height={`500px`} />
+                </div>
+                <figcaption>
+                  Мультистабильность и кризисы хаотических аттракторов (merging
+                  или merging crisis, expansion или interior crisis, final или
+                  boundary crisis bifurcations)
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div style={{ margin: `auto` }}>
+            <MathJaxContext>
+              <MathJax style={{ fontSize: `24px` }} className={styles.font}>
+                {
+                  "\\begin{equation} x = -b_1 * x, y = g_1 * x - b_2 * y + h(z), z = g_2 * y - b_3 * z, x(t^+_k) + F(z(t_k)),\\end{equation}"
+                }
+                {
+                  "\\begin{equation} t_{k+1} = t_k + Ф(z(t_k)),Ф(z)=k_1 + k_2\\dfrac{(z/h)^P}{1 + (z/h)^P}, F(z) = k_3 + \\dfrac{k4}{1 + (z/h)^P},\\end{equation}"
+                }
+                {
+                  "\\begin{equation} h(z) = b + \\dfrac{a}{1 + k * (z/r)^s}, b \\geq 0, s > 0, r > 0, a > 0, k > 0.\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
           </div>
         </div>
       </Template>

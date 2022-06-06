@@ -157,6 +157,14 @@ export const DiscontinuousCircles = () => {
           </div>
         </div>
       </Template>
+      <Template title="Результаты экспериментальных исследований динамических режимов на установке">
+        <img
+          src="/discontinuousCircles/6.jpg"
+          alt="img"
+          height={`1050px`}
+          style={{ margin: `auto` }}
+        />
+      </Template>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
           <li>
