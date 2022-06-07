@@ -154,6 +154,25 @@ export const DiscontinuousCircles = () => {
                 }
               </MathJax>
             </MathJaxContext>
+            <div>
+              Здесь ξ, χ_0 - входной сигнал и гистерезис релейного элемента; η -
+              предыдущее состояние релейного элемента; V_ref - сигнал задания
+              момента M(i_d) двигателя; β - чувствительность датчика тока якоря;
+              C_E, C_w, - постоянные электрической машины; L^*_d, R^*_d -
+              индуктивность и сопротивление обмотки якоря; L_F, R_F
+              индуктивность и сопротивление сглаживающего фильтра; Если K_F = 1,
+              то силовой ключ S замкнут (силовой транзистор открыт) и если K_F =
+              0, то ключ S разомкнут (транзистор закрыт).
+            </div>
+            <div>Параметры двигателя MAXON RE 25:</div>
+
+            <MathJaxContext>
+              <MathJax className={styles.font} style={{ textAlign: `center` }}>
+                {
+                  "\\begin{equation}L_d^*= 0.238 * 10^{-3} Гн; R_d = 2.18 Ом; C_w = 0.02353 B*c/ рад; C_E = 23.5 * 10^{-3} H * m/A, J_d = 1.08 * 10^{-6} кг * м^2\\end{equation}"
+                }
+              </MathJax>
+            </MathJaxContext>
           </div>
         </div>
       </Template>
@@ -164,6 +183,82 @@ export const DiscontinuousCircles = () => {
           height={`1050px`}
           style={{ margin: `auto` }}
         />
+      </Template>
+      <Template title="Сведение 5-мерной модели к динамической системе с двумя масштабами времени">
+        <div style={{ fontWeight: `bold` }}>Уравнения движения</div>
+        <div style={{ margin: `auto` }}>
+          <MathJaxContext>
+            <MathJax className={styles.font} style={{ margin: `auto` }}>
+              {
+                "\\begin{equation}L\\dfrac{di_d}{dt} + Ri_d + C_w(t) = V_0 K_F (\\xi,\\eta), w(t) = \\dfrac{d\\phi}{dt} = w_0 + w_m cos(\\Omega t),\\end{equation}"
+              }
+              {
+                "\\begin{equation}w_0 = \\dfrac{V_0 - V_{ref} R_d / \\beta ,}{C_w} w_m = \\dfrac{\\sqrt{1+T^2_d \\Omega^2} R_d}{C^2_w}\\Delta M, T_d = \\dfrac{L_d}{R_d},\\end{equation}"
+              }
+              {
+                "\\begin{equation} \\Delta M = 0.5 C_E(V_{ref} + \\chi_0 - \\beta i^*_d)/\\beta, i^*_d = \\min\\limits_{0\\leq t \\leq T} i_d(t).\\end{equation}"
+              }
+            </MathJax>
+          </MathJaxContext>
+        </div>
+      </Template>
+      <Template title="Построение разрывного отображения окружности">
+        <MathJaxContext>
+          <MathJax className={styles.font} style={{ margin: `auto` }}>
+            {
+              "\\begin{equation}\\theta _{k+1} = F(\\theta _k) = f^- o f^+ (\\theta _k) = \\theta _k + z^+_k + z^-_k \\  mod \\ 2\\pi \\end{equation}"
+            }
+            {
+              "\\begin{equation} \\theta_k: \\end{equation} фаза в k-й момент переключения релейного элемента."
+            }
+            {
+              "\\begin{equation} z^+_k, z^-_k: \\end{equation} коэффициенты заполнения импульсов."
+            }
+          </MathJax>
+        </MathJaxContext>
+        <div
+          style={{
+            display: `flex`,
+            gap: `40px`,
+            margin: `10px auto 10px auto`,
+          }}
+        >
+          <img
+            src="/discontinuousCircles/7.jpg"
+            alt="img"
+            height={`350px`}
+            style={{ margin: `auto` }}
+          />
+          <img
+            src="/discontinuousCircles/8.jpg"
+            alt="img"
+            height={`350px`}
+            style={{ margin: `auto` }}
+          />
+          <img
+            src="/discontinuousCircles/9.jpg"
+            alt="img"
+            height={`350px`}
+            style={{ margin: `auto` }}
+          />
+          <img
+            src="/discontinuousCircles/10.jpg"
+            alt="img"
+            height={`350px`}
+            style={{ margin: `auto` }}
+          />
+        </div>
+      </Template>
+      <Template title="Бифуркационная структура">
+        <div style={{ display: `flex`, gap: `10px`, flexDirection: `row` }}>
+          <img src="/discontinuousCircles/11.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/12.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/13.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/14.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/15.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/16.jpg" alt="img" height={`350px`} />
+          <img src="/discontinuousCircles/17.jpg" alt="img" height={`350px`} />
+        </div>
       </Template>
       <Template title="Основные публикации по результатам исследований">
         <ul style={{ color: `black` }}>
