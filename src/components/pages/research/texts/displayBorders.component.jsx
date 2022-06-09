@@ -57,7 +57,6 @@ export const DisplayBorders = () => {
               <div
                 style={{
                   backgroundColor: `rgb(255, 220, 140)`,
-                  borderRadius: `0px 0px 10px 10px`,
                 }}
               >
                 <img

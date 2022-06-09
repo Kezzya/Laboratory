@@ -23,3 +23,39 @@ header {
 .headerText:hover {
   color: blue;
 }
+@media (max-width: 1199.98px) {
+  .header {
+    display: none;
+  }
+}
+.burger {
+  position: sticky;
+  margin: 30px 0px 0px 30px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.034);
+  color: rgb(0, 0, 0);
+
+  z-index: 99;
+}
+
+@media screen and (min-width: 1199.98px) {
+  .burger {
+    display: none;
+
+    // "height: 0" not work with css transitions
+  }
+}
+
+.listPages {
+  background: #e5feff;
+  overflow: hidden;
+  text-align: center;
+  background-color: orange;
+  padding: 6px;
+}
+.listPages:hover {
+  background-color: rgba(255, 166, 0, 0.938);
+}
+.hidden {
+  display: none;
+}
