@@ -23,7 +23,7 @@ header {
 .headerText:hover {
   color: blue;
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1099.98px) {
   .header {
     display: none;
   }
@@ -38,7 +38,7 @@ header {
   z-index: 99;
 }
 
-@media screen and (min-width: 1199.98px) {
+@media screen and (min-width: 1099.98px) {
   .burger {
     display: none;
 

@@ -88,6 +88,7 @@ export const Header = () => {
           src="burger.svg"
           width={`64px`}
           onClick={() => listPages.classList.toggle("hidden")}
+            style={{cursor:`pointer`}}
         />
 
         <div className="listPages hidden">

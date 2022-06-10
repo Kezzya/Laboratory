@@ -17,7 +17,15 @@ export const Research = (props) => {
   return (
     <div>
       <Header />
-      <Template title="Направления научных исследований"></Template>
+      {language === `RU` ? (
+        <Template title="Направления научных исследований"></Template>
+      ) : (
+        <Template
+          title="
+        Directions of scientific research"
+        ></Template>
+      )}
+
       <div className={styles.list}>
         {language === "RU" ? (
           <ul style={{ color: `black`, fontWeight: `` }}>

@@ -8,27 +8,28 @@ export const Contacts = () => {
     <div>
       <Header />
       <div>
-        <Template title={`Руководители лаборатории`}>
-          <div
-            style={{
-              display: `flex`,
-              flexDirection: `column`,
-              gap: `20px`,
-              margin: `10px`,
-              fontSize: `20px`,
-            }}
-          >
+        {language === `RU` ? (
+          <Template title={`Руководители лаборатории`}>
             <div
               style={{
                 display: `flex`,
-                flexDirection: `row`,
+                flexDirection: `column`,
                 gap: `20px`,
+                margin: `10px`,
+                fontSize: `20px`,
               }}
             >
-              <div>
-                <img src={`../Zhusubaliyev.jpg`} />
-              </div>
-              {language === `RU` ? (
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `row`,
+                  gap: `20px`,
+                }}
+              >
+                <div>
+                  <img src={`../Zhusubaliyev.jpg`} />
+                </div>
+
                 <div>
                   <span style={{ fontWeight: `bold` }}>
                     Научный руководитель и основатель лаборатории:&nbsp;
@@ -44,35 +45,18 @@ export const Contacts = () => {
                   <div>&nbsp;</div>
                   <div>E-mail: zhanybai@gmail.com</div>
                 </div>
-              ) : (
-                <div>
-                  <span style={{ fontWeight: `bold` }}>
-                    Scientific director and founder of the laboratory:&nbsp;
-                  </span>
-                  doctor of technical sciences, professor Zhusubaliev Zhanybay
-                  Tursunbaevich (Zhusubaliyev Zhanybai T.), professor of the
-                  department computer technology of the Southwestern State
-                  University (SWSU). Prof. Zhusubaliev Zh.T. - leading scientist
-                  areas of nonlinear dynamics and the theory of bifurcations of
-                  non-smooth dynamic systems in applications to power
-                  electronics, electromechanics, theory of automatic control,
-                  mathematical modeling in endocrinology and mechanics.
-                  <div>&nbsp;</div>
-                  <div>E-mail: zhanybai@gmail.com</div>
-                </div>
-              )}
-            </div>
-            <div
-              style={{
-                display: `flex`,
-                flexDirection: `row`,
-                gap: `20px`,
-              }}
-            >
-              <div>
-                <img src="../Titov.jpg" style={{ height: `300px` }} />
               </div>
-              {language === `RU` ? (
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `row`,
+                  gap: `20px`,
+                }}
+              >
+                <div>
+                  <img src="../Titov.jpg" style={{ height: `300px` }} />
+                </div>
+
                 <div>
                   <span style={{ fontWeight: `bold` }}>
                     Руководитель лаборатории и координатор:&nbsp;
@@ -95,7 +79,60 @@ export const Contacts = () => {
                   <div>Телефон: +7 (4712) 50-47-99</div>
                   <div>E-mail: umsswsu@gmail.com</div>
                 </div>
-              ) : (
+              </div>
+            </div>
+          </Template>
+        ) : (
+          <Template title={`Laboratory leaders`}>
+            <div>
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `column`,
+                  gap: `20px`,
+                  margin: `10px`,
+                }}
+              >
+                <div
+                  style={{
+                    display: `flex`,
+                    flexDirection: `row`,
+                    gap: `20px`,
+                  }}
+                >
+                  <div>
+                    <img src={`../Zhusubaliyev.jpg`} />
+                  </div>
+
+                  <div>
+                    <span style={{ fontWeight: `bold` }}>
+                      Scientific director and founder of the laboratory:&nbsp;
+                    </span>
+                    doctor of technical sciences, professor Zhusubaliev Zhanybay
+                    Tursunbaevich (Zhusubaliyev Zhanybai T.), professor of the
+                    department computer technology of the Southwestern State
+                    University (SWSU). Prof. Zhusubaliev Zh.T. - leading
+                    scientist areas of nonlinear dynamics and the theory of
+                    bifurcations of non-smooth dynamic systems in applications
+                    to power electronics, electromechanics, theory of automatic
+                    control, mathematical modeling in endocrinology and
+                    mechanics.
+                    <div>&nbsp;</div>
+                    <div>E-mail: zhanybai@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `row`,
+                  gap: `20px`,
+                }}
+              >
+                <div>
+                  <img src="../Titov.jpg" style={{ height: `300px` }} />
+                </div>
+
                 <div>
                   <span style={{ fontWeight: `bold` }}>
                     Laboratory supervisor and coordinator:&nbsp;
@@ -119,10 +156,13 @@ export const Contacts = () => {
                   <div>Phone: +7 (4712) 50-47-99</div>
                   <div>E-mail: umsswsu@gmail.com</div>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
-        </Template>
+          </Template>
+        )}
+
+        {/*
+         */}
       </div>
     </div>
   );
