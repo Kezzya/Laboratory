@@ -3,8 +3,10 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../../../languageWrapApp";
 import { Template } from "../../../template/template.component";
 import styles from "./neuromuscular.module.scss";
+
 export const Neuromuscular = () => {
   const { language } = useContext(LanguageContext);
+
   return (
     <div>
       {language === `RU` ? (

@@ -6,7 +6,7 @@ export const Template = (props) => {
     <div>
       <div className={styles.header}>
         {props.title}
-        <img src="../swsunew.svg" />
+        <img src="../swsunew.svg" className={styles.img} />
       </div>
 
       {props.children === undefined ? (

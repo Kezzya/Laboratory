@@ -8,6 +8,7 @@
   padding-left: 15px;
   font-weight: bold;
   box-shadow: 1px 1px 1px 1px;
+
   & img {
     position: absolute;
     right: 5px;
@@ -26,7 +27,7 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 1200px) {
   .img {
     display: none;
   }

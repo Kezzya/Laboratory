@@ -4,12 +4,16 @@ import { Template } from "../../../template/template.component";
 import styles from "./neuromuscular.module.scss";
 import { useContext } from "react";
 import { LanguageContext } from "../../../../languageWrapApp";
+import BackToTop from "../../../scrollTop.component";
+import { StyledEngineProvider } from "@mui/material/styles";
 export const DiscontinuousCircles = () => {
   const { language } = useContext(LanguageContext);
+
   return (
     <div>
       {language === `RU` ? (
         <div>
+          {" "}
           <Template title="5. Разрывные отображения окружности">
             <div style={{ display: `flex`, flexDirection: `column` }}>
               <div style={{ display: `flex`, margin: `auto` }}>

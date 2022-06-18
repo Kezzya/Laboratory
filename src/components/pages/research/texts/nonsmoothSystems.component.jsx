@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../../../languageWrapApp";
 import { Template } from "../../../template/template.component";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 export const NonsmoothSystems = () => {
   const { language } = useContext(LanguageContext);
+
   return (
     <div>
       {language === `RU` ? (
         <div>
-          {" "}
           <Template title="2. Глобальная динамика негладких систем">
             <div style={{ display: `flex`, flexWrap: `wrap`, gap: `20px` }}>
               {listImg.map(
