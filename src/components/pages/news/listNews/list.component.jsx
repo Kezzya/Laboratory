@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../../../../languageWrapApp";
 import styles from "./list.module.scss";
 export const ListNews = (props) => {
   const { language } = useContext(LanguageContext);
+  useEffect(() => {}, []);
   return (
     <div className={styles.wrap}>
       <img src={props.src} className={styles.imgSize} alt="img" />

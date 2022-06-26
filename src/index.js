@@ -16,6 +16,7 @@ import ScrollToTop from "./components/scrollTop.component";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <LanguageWrapApp>
+    <ScrollToTop />
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<App />} />
@@ -25,6 +26,5 @@ root.render(
         <Route exact path="/news/priority" element={<Priority />} />
       </Routes>
     </BrowserRouter>
-    <ScrollToTop />
   </LanguageWrapApp>
 );
