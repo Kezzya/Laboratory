@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { LanguageContext } from "../../../languageWrapApp";
 import { Template } from "../../template/template.component";
-const urlServer = "http://localhost:1337";
+const urlServer = "https://enigmatic-savannah-49524.herokuapp.com";
 export const TemplateResearch = (props) => {
   const { language } = useContext(LanguageContext);
   return (

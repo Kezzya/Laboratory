@@ -10,7 +10,7 @@ import { Template } from "../../template/template.component";
 import { ListNews } from "./listNews/list.component";
 
 export const News = () => {
-  const urlServer = "http://localhost:1337";
+  const urlServer = "https://enigmatic-savannah-49524.herokuapp.com";
   const { language } = useContext(LanguageContext);
   let [respList, setRespList] = useState([]);
   let [img, setImg] = useState();

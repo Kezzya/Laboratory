@@ -14,7 +14,7 @@ import { Testosterone } from "./texts/testosterone.component";
 export const Research = (props) => {
   const { language } = useContext(LanguageContext);
   const [current, setCurrent] = useState(1);
-  const urlServer = "http://localhost:1337";
+  const urlServer = "https://enigmatic-savannah-49524.herokuapp.com";
   let [respList, setRespList] = useState([]);
   let [img, setImg] = useState();
   // Список всех новостей
