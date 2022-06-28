@@ -16,17 +16,19 @@ export const News = () => {
   let [img, setImg] = useState();
   // Список всех новостей
   const getAPI = () => {
-    fetch(`${urlServer}/api/upload/files`)
+    fetch(`${urlServer}/api/news?populate=img`)
       .then((resp) => resp.json())
-      .then((resp) => setImg(resp));
-    fetch(`${urlServer}/api/news`)
+      .then((resp) => setImg(resp.data));
+    fetch(`${urlServer}/api/news?populate=img`)
       .then((resp) => resp.json())
       .then((resp) => setRespList(resp.data));
+    if (!respList || !img) return null;
   };
 
   return (
     <div>
-      {img == undefined || respList == undefined ? getAPI() : console.log(1)}
+      {img == undefined ? getAPI() : null}
+
       <Header />
 
       {language === `RU` ? (
@@ -40,11 +42,12 @@ export const News = () => {
               let day = el.attributes.Date.slice(8, 10);
               let title = el.attributes.Title;
               let ruText = el.attributes.GeneralContent;
+              let src = urlServer + el.attributes.img.data.attributes.url;
 
               return (
                 <ListNews
                   key={i}
-                  src={urlServer + img[i].url}
+                  src={src}
                   day={day}
                   month={month}
                   year={year}
@@ -78,6 +81,28 @@ export const News = () => {
         <div>
           {" "}
           <Template title="News" />
+          <div>
+            {respList.map((el, i) => {
+              let year = el.attributes.Date.slice(0, 4);
+              let month = el.attributes.Date.slice(5, 7);
+              let day = el.attributes.Date.slice(8, 10);
+              let title = el.attributes.engTitle;
+              let engText = el.attributes.engGeneralContent;
+              let src = urlServer + el.attributes.url;
+              //      let src = urlServer + el.attributes.url;
+              return (
+                <ListNews
+                  key={i}
+                  src={src}
+                  day={day}
+                  month={month}
+                  year={year}
+                  title={title}
+                  engText={engText}
+                />
+              );
+            })}
+          </div>
           <Link
             to="/news/priority"
             style={{

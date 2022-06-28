@@ -4,6 +4,7 @@ import { LanguageContext } from "../../../languageWrapApp";
 import { Header } from "../../header/header.component";
 import { Template } from "../../template/template.component";
 import styles from "./research.module.scss";
+import { TemplateResearch } from "./templateResearch.component";
 import { DiscontinuousCircles } from "./texts/discontinuousСircles.component";
 import { DisplayBorders } from "./texts/displayBorders.component";
 import { Neuromuscular } from "./texts/neuromuscular.component";
@@ -13,9 +14,22 @@ import { Testosterone } from "./texts/testosterone.component";
 export const Research = (props) => {
   const { language } = useContext(LanguageContext);
   const [current, setCurrent] = useState(1);
-
+  const urlServer = "http://localhost:1337";
+  let [respList, setRespList] = useState([]);
+  let [img, setImg] = useState();
+  // Список всех новостей
+  const getAPI = () => {
+    fetch(`${urlServer}/api/researchs?populate=img`)
+      .then((resp) => resp.json())
+      .then((resp) => setImg(resp.data));
+    fetch(`${urlServer}/api/researchs?populate=img`)
+      .then((resp) => resp.json())
+      .then((resp) => setRespList(resp.data));
+    if (!respList || !img) return null;
+  };
   return (
     <div>
+      {img == undefined ? getAPI() : null}
       <Header />
       {language === `RU` ? (
         <Template title="Направления научных исследований"></Template>
@@ -44,6 +58,14 @@ export const Research = (props) => {
             <li onClick={() => setCurrent(5)}>
               5. Разрывные отображения окружности
             </li>
+            {respList[0] !== undefined
+              ? respList.map((el, i) => {
+                  {
+                    let ruTitle = el.attributes.Title;
+                    return <li onClick={() => setCurrent(7 + i)}>{ruTitle}</li>;
+                  }
+                })
+              : null}
             <li onClick={() => setCurrent(6)}>Внедрение результатов НИР</li>
           </ul>
         ) : (
@@ -61,13 +83,38 @@ export const Research = (props) => {
             <li onClick={() => setCurrent(5)}>
               5. Discontinuous circle mappings
             </li>
+            {respList[0] !== undefined
+              ? respList.map((el, i) => {
+                  {
+                    let engTitle = el.attributes.engTitle;
+                    return (
+                      <li onClick={() => setCurrent(7 + i)}>{engTitle}</li>
+                    );
+                  }
+                })
+              : null}
             <li onClick={() => setCurrent(6)}>
               Implementation of research results
             </li>
           </ul>
         )}
       </div>
-      {renderSwitch(current)}
+      {}
+      {current > 6 ? (
+        <div>
+          {getResearch(
+            respList[current - 7].attributes.Title,
+            respList[current - 7].attributes.engTitle,
+            respList[current - 7].attributes.GeneralContent,
+            respList[current - 7].attributes.engGeneralContent,
+            respList[current - 7].attributes.publications,
+            respList[current - 7].attributes.engPublications,
+            respList[current - 7].attributes.img.data
+          )}
+        </div>
+      ) : (
+        renderSwitch(current)
+      )}
     </div>
   );
 };
@@ -89,4 +136,25 @@ const renderSwitch = (currentState) => {
     default:
       return <Neuromuscular />;
   }
+};
+const getResearch = (
+  title,
+  engTitle,
+  GeneralContent,
+  engGeneralContent,
+  Publications,
+  engPublications,
+  img
+) => {
+  return (
+    <TemplateResearch
+      Title={title}
+      engTitle={engTitle}
+      GeneralContent={GeneralContent}
+      engGeneralContent={engGeneralContent}
+      Publications={Publications}
+      engPublications={engPublications}
+      img={img}
+    />
+  );
 };
