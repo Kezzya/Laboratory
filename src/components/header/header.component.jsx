@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.styles.scss";
 import { LanguageContext } from "../../languageWrapApp";
 export const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  // const {listPages, setListPages} = useState()
-  let listPages;
+  const [listPages, setListPages] = useState("");
+
   useEffect(() => {
-    listPages = document.querySelector(".listPages");
+    setListPages(document.querySelector(".listPages"));
   }, []);
 
   return (
@@ -88,7 +88,7 @@ export const Header = () => {
           src="burger.svg"
           width={`64px`}
           onClick={() => listPages.classList.toggle("hidden")}
-            style={{cursor:`pointer`}}
+          style={{ cursor: `pointer` }}
         />
 
         <div className="listPages hidden">
